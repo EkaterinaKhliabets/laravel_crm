@@ -17,9 +17,9 @@ return new class extends Migration
             $table->id();
             $table->string('name', 255);
             $table->string('BIK', 255);
-            $table->string('city', 255);
-            $table->string('address', 255);
-            $table->string('phone', 13);
+            $table->string('city', 255)->nullable();
+            $table->string('address', 255)->nullable();
+            $table->string('phone', 13)->nullable();
             $table->timestamps();
         });
     }

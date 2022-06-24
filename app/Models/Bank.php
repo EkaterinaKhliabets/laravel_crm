@@ -8,4 +8,29 @@ use Illuminate\Database\Eloquent\Model;
 class Bank extends Model
 {
     use HasFactory;
+    protected $fillable = ['name', 'BIK',  'phone', 'city', 'address' ];
+
+   /* public function getCityAttribute($value)
+    {
+        if($value == null){
+            $value = '-';
+        }
+        return $value;
+    }
+
+    public function getAddressAttribute($value)
+    {
+        if($value == null){
+            $value = '-';
+        }
+        return $value;
+    }
+
+    public function getPhoneAttribute($value)
+    {
+        if($value == null){
+            $value = '-';
+        }
+        return $value;
+    }*/
 }

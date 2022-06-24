@@ -31,6 +31,19 @@
         }
     </style>
 
+    <style>
+        table.table form{
+            display: inline-block;
+        }
+        button.delete-task
+        {
+            background: transparent;
+            border: none;
+            color: #337ab7;
+            padding: 0;
+        }
+    </style>
+
 
     <!-- Custom styles for this template -->
     <link href="headers.css" rel="stylesheet">
@@ -91,6 +104,7 @@
                         <li><a class="dropdown-item" href="#">Reports</a></li>
                         <li><a class="dropdown-item" href="#">Analytics</a></li>
                         <li><a class="dropdown-item" href="{{route('organization.index')}}">Организация</a></li>
+                        <li><a class="dropdown-item" href="{{route('banks.index')}}">Банки</a></li>
                     </ul>
                 </div>
 
