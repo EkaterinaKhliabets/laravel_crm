@@ -105,6 +105,7 @@
                         <li><a class="dropdown-item" href="#">Analytics</a></li>
                         <li><a class="dropdown-item" href="{{route('organization.index')}}">Организация</a></li>
                         <li><a class="dropdown-item" href="{{route('banks.index')}}">Банки</a></li>
+                        <li><a class="dropdown-item" href="{{route('currencies.index')}}">Валюты</a></li>
                     </ul>
                 </div>
 

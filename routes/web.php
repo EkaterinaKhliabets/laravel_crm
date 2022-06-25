@@ -36,3 +36,13 @@ Route::resource('banks', \App\Http\Controllers\BankController::class)->names([
     'update' => 'banks.update',
     'destroy' => 'banks.delete'
 ]);
+
+Route::resource('currencies', \App\Http\Controllers\CurrencyController::class )->names([
+    'edit' => 'currencies.edit',
+    'create' => 'currencies.create',
+    'show' => 'currencies.show',
+    'index' => 'currencies.index',
+    'store' => 'currencies.store',
+    'update' => 'currencies.update',
+    'destroy' => 'currencies.delete'
+]);

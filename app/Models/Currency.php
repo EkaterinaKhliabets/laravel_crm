@@ -9,6 +9,8 @@ class Currency extends Model
 {
     use HasFactory;
 
+    protected $fillable = ['name', 'id_number',  'character_code'];
+
     public function settings()
     {
         return $this->hasMany(Setting::class);
