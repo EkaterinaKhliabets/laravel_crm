@@ -38,8 +38,8 @@ class StoreBankRequest extends FormRequest
             'name.required' => 'Заполните название банка',
             'BIK.required' => 'Заполните БИК',
             'BIK.numeric' => 'БИК должен состоять только из цифр',
-            'phone.numeric' => 'Телефон должен состоять только из цифр',
-            'phone.digits' => 'В телефоне должно быть 12 цифр',
+            //'phone.numeric' => 'Телефон должен состоять только из цифр',
+            //'phone.digits' => 'В телефоне должно быть 12 цифр',
         ];
     }
 }

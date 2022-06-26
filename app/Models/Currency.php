@@ -11,9 +11,15 @@ class Currency extends Model
 
     protected $fillable = ['name', 'id_number',  'character_code'];
 
+    public function bankAccounts()
+    {
+        return $this->hasMany(BankAccount::class);
+    }
+
     public function settings()
     {
         return $this->hasMany(Setting::class);
     }
+
 
 }

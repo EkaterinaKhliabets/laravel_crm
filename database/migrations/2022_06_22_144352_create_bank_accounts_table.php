@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('bank_accounts', function (Blueprint $table) {
             $table->id();
-            $table->string('checking_account', 28);
+            $table->string('checking_account', 28); //расчетный счет
             $table->foreignId('bank_id')->constrained('banks')->restrictOnDelete();
             $table->foreignId('currency_id')->constrained('currencies')->restrictOnDelete();
             $table->foreignId('organization_id')->constrained('organizations')->restrictOnDelete();
