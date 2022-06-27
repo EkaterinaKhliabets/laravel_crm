@@ -21,7 +21,7 @@ Route::get('/', function () {
 
 
 
-/*Route::get('/organization', [\App\Http\Controllers\OrganizationController::class, 'index'])
+Route::get('/organization', [\App\Http\Controllers\OrganizationController::class, 'index'])
     ->name('organization.index');
 
 Route::put('/organization', [\App\Http\Controllers\OrganizationController::class, 'update'])
@@ -56,4 +56,4 @@ Route::resource('bank_accounts', \App\Http\Controllers\BankAccountController::cl
     'update' => 'bankAccounts.update',
     'destroy' => 'bankAccounts.delete'
 ]);
-*/
+
