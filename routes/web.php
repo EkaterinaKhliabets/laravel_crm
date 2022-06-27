@@ -13,11 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-/*Route::get('/', function () {
-    return 111;
-});*/
+Route::get('/', function () {
+    return 'Hello,user';
+});
 
-Route::get('/', [\App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard');
+//Route::get('/', [\App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard');
 
 
 
