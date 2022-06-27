@@ -9,6 +9,6 @@ jobs:
       - name: 🚚 Get latest code
         uses: sebastianpopp/git-ftp-action@releases/v3
         with:
-          url: "ftp://khliabets_laravel_crm"
+          url: "ftp://ekhliabets.beget.tech"
           user: "ekhliabets_crm"
           password:
