@@ -4,32 +4,42 @@
 
     <div class=" px-4 ">
 
-
         <div class="form-group">
-            <a href="{{route('banks.create')}}" class="btn btn-primary">Добавить</a>
+            <a href="{{route('users.create')}}" class="btn btn-primary">Добавить</a>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                    Показать всех пользователей
+                </label>
+            </div>
+
         </div>
 
         <table class="table table-hover table-striped">
             <thead>
             <tr class="table-primary">
-                <th scope="col">Название</th>
-                <th scope="col">BIK</th>
-                <th scope="col">Город</th>
-                <th scope="col">Адрес</th>
+                <th scope="col">Фото</th>
+                <th scope="col">ФИО</th>
+                <th scope="col">Должность</th>
+                <th scope="col">Email</th>
                 <th scope="col">Телефон</th>
                 <th scope="col">Действия</th>
             </tr>
             </thead>
             <tbody>
-            @foreach($banks as $bank)
+            @foreach($users as $user)
                 <tr>
-                    <th scope="row">{{$bank->name}}</th>
-                    <td>{{$bank->BIK}}</td>
-                    <td>{{$bank->city}}</td>
-                    <td>{{$bank->address}}</td>
-                    <td>{{$bank->phone}}</td>
                     <td>
-                        <a href="{{route('banks.edit', $bank->id)}}" class="fa fa-pencil">
+                        <img src="{{asset("storage/". $user->avatar)}}" alt="avatar-image" class="img-responsive"
+                             width="150">
+                    </td>
+                    <td>{{$user->name . ' ' . $user->lastname}}</td>
+                    <td >{{'будет сделано позже'}}</td>
+                    <td>{{$user->email}}</td>
+                    <td>{{$user->phone}}</td>
+                    <td>
+                        <a href="{{route('users.edit', $user->id)}}" class="fa fa-pencil">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                  class="bi bi-eyedropper" viewBox="0 0 16 16">
                                 <path
@@ -37,7 +47,7 @@
                             </svg>
                         </a>
 
-                        <form method="POST" action="{{route("banks.delete", $bank->id)}}">
+                        <form method="POST" action="{{route("users.delete", $user->id)}}">
                             @csrf
                             @method("DELETE")
                             <button onclick="return confirm('Вы действительно хотите удалить?')" type="submit"
@@ -59,10 +69,9 @@
             </tbody>
         </table>
 
-        {{ $banks->links('vendor.pagination.bootstrap-5') }}
+        {{ $users->links('vendor.pagination.bootstrap-5') }}
 
     </div>
-
 
 @endsection
 

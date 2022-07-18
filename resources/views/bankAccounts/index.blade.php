@@ -56,6 +56,9 @@
             @endforeach
             </tbody>
         </table>
+
+        {{ $bankAccounts->links('vendor.pagination.bootstrap-5') }}
+
     </div>
 
 

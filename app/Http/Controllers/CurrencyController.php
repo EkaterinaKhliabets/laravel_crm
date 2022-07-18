@@ -11,7 +11,7 @@ class CurrencyController extends Controller
 {
     public function index()
     {
-        $currencies = Currency::all();
+        $currencies = Currency::paginate(5);
         return view('currencies.index', ['currencies' => $currencies]);
     }
 

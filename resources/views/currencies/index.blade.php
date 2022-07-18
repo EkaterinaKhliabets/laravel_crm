@@ -55,7 +55,7 @@
             </tbody>
         </table>
 
-
+        {{ $currencies->links('vendor.pagination.bootstrap-5') }}
 
     </div>
 

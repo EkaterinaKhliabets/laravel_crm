@@ -107,6 +107,8 @@
                         <li><a class="dropdown-item" href="{{route('banks.index')}}">Банки</a></li>
                         <li><a class="dropdown-item" href="{{route('bankAccounts.index')}}">Банковские счета</a></li>
                         <li><a class="dropdown-item" href="{{route('currencies.index')}}">Валюты</a></li>
+                        <li><a class="dropdown-item" href="{{route('users.index')}}">Сотрудники</a></li>
+
                     </ul>
                 </div>
 

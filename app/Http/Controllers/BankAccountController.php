@@ -14,7 +14,7 @@ class BankAccountController extends Controller
 {
     public function index()
     {
-        $bankAccounts = BankAccount::all();
+        $bankAccounts = BankAccount::paginate(5);
         return view('bankAccounts.index', ['bankAccounts' => $bankAccounts]);
     }
 

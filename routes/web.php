@@ -57,3 +57,13 @@ Route::resource('bank_accounts', \App\Http\Controllers\BankAccountController::cl
     'destroy' => 'bankAccounts.delete'
 ]);
 
+Route::resource('users', \App\Http\Controllers\UserController::class)->names([
+    'edit' => 'users.edit',
+    'create' => 'users.create',
+    'show' => 'users.show',
+    'index' => 'users.index',
+    'store' => 'users.store',
+    'update' => 'users.update',
+    'destroy' => 'users.delete'
+]);
+
